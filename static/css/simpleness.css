@@ -255,6 +255,7 @@ article h5, h6 {
 
 .post-text figure {
   margin: auto;
+  border-left: 4px solid #ababab;
 }
 
 .post-text img {
