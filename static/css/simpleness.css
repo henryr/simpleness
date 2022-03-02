@@ -255,7 +255,15 @@ article h5, h6 {
 
 .post-text figure {
   margin: auto;
-  border-left: 4px solid #ababab;
+  padding: 0.2em;
+  border: 1px solid #c6c5c5;
+}
+
+.post-text figcaption {
+  text-align: center;
+  font-weight: medium;
+  border-top: 1px solid #ababab;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .post-text img {
