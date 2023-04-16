@@ -4,7 +4,7 @@
 /* custom variable */
 :root {
   /* fonts */
-  --normal-font: Georgia, "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  --normal-font: "EB Garamond", Georgia, "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
   --code-font: monospace, 'Courier New', Courier;
   --motto-font: "Motto";
   /* colors */
@@ -47,11 +47,12 @@
     margin: 1em 0em;
   }
 
-  .post-text tr:hover, tr:nth-child(odd) td {
+  .post-text tr:hover,
+  tr:nth-child(odd) td {
     background: var(--light-gray-color);
   }
 
-  .post-text :not(pre) > code {
+  .post-text :not(pre)>code {
     font-size: var(--code-font);
     background: var(--light-gray-color);
     opacity: .9;
@@ -59,9 +60,10 @@
     margin: .1em .1em;
     padding: .1em .3em;
   }
+
   .post-toc li a {
-  color: var(--blank-color);
-  text-decoration: none;
+    color: var(--blank-color);
+    text-decoration: none;
   }
 }
 
@@ -90,7 +92,7 @@
     margin: 1em 0em;
   }
 
-  .post-text :not(pre) > code {
+  .post-text :not(pre)>code {
     font-size: var(--code-font);
     background: #3f3f3f;
     opacity: .9;
@@ -108,15 +110,15 @@ html {
 
 body {
   -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--normal-font);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.3em;
   max-width: 900px;
   padding: .5em;
-  margin:0 auto;
+  margin: 0 auto;
+  text-align: justify;
 }
 
 a {
@@ -128,6 +130,7 @@ article a:hover {
   border-bottom: 1px dashed;
   padding-bottom: 1px;
 }
+
 /* ------- html end -------*/
 
 
@@ -139,6 +142,8 @@ article a:hover {
   align-items: center;
   line-height: 1.5;
   border-bottom: 1px solid var(--light-gray-color);
+  font-family: "OpenSans", sans-serif;
+  font-weight: 300;
 }
 
 .nav-left {
@@ -159,7 +164,7 @@ article a:hover {
 }
 
 .nav-title {
-  font-family: var(--normal-font);
+  font-family: "OpenSans", sans-serif;
   margin-left: 0;
   font-weight: 600;
 }
@@ -167,6 +172,7 @@ article a:hover {
 .nav-menu {
   margin-left: 0;
 }
+
 /* ------- navigation end -------*/
 
 
@@ -179,6 +185,7 @@ article a:hover {
   text-align: center;
   border-top: 1px solid var(--light-gray-color);
 }
+
 /* ------- foot end -------*/
 
 
@@ -194,25 +201,39 @@ article header {
 
 /* article title */
 article header h1 {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 300;
   font-size: 1.8em;
   margin: .3em .5em;
+  line-height: 1.3em;
 }
 
 article h2 {
-  font-size: 1.6em;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  line-height: 1.2em;
 }
 
 article h3 {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 300;
   font-size: 1.4em;
 }
 
 article h4 {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 300;
   font-size: 1.2em;
 }
 
-article h5, h6 {
- font-size: 1em;
+article h5,
+h6 {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 350;
+  font-size: 1.2em;
 }
+
 /* ------- article end -------*/
 
 
@@ -224,14 +245,18 @@ article h5, h6 {
 
 .archive li {
   font-size: 1.1em;
-  list-style: none; /* remove the dots */
+  list-style: none;
+  /* remove the dots */
 }
 
 .archive time {
   display: inline-block;
   min-width: 12ch;
   color: var(--gray-color);
+  font-family: sans-serif;
+  font-weight: 300;
 }
+
 /* ------- archive end -------*/
 
 
@@ -239,6 +264,7 @@ article h5, h6 {
 .post-metadata {
   color: var(--gray-color);
 }
+
 /* ------- post metadata end -------*/
 
 
@@ -263,7 +289,7 @@ article h5, h6 {
   text-align: center;
   font-weight: medium;
   border-top: 1px solid #ababab;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .post-text img {
@@ -271,7 +297,7 @@ article h5, h6 {
   max-width: 95%;
   height: auto;
   /* center horizontally */
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
   display: block;
 }
@@ -283,7 +309,8 @@ article h5, h6 {
   box-shadow: 0 0 0 1px var(--light-gray-color) inset;
 }
 
-.post-text th, td {
+.post-text th,
+td {
   padding: .5em 1em;
   box-shadow: 0 0 0 1px var(--gray-color);
 }
@@ -301,14 +328,14 @@ article h5, h6 {
   background-color: #eff1f5;
 }
 
-.highlight pre::-webkit-scrollbar-track{
+.highlight pre::-webkit-scrollbar-track {
   border-radius: 3px;
   background-color: transparent;
 }
 
-.highlight pre::-webkit-scrollbar-thumb{
+.highlight pre::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color:#a8a8a8;
+  background-color: #a8a8a8;
   border: 2px solid #eff1f5
 }
 
@@ -325,27 +352,33 @@ article h5, h6 {
   padding-left: 1em;
   max-height: 85%;
 }
+
 .post-toc-title {
   font-weight: bold;
   margin-left: 1em;
   padding-left: 1em;
 }
+
 .post-toc ul {
   padding-left: 1em;
 }
+
 .post-toc li {
   list-style: none;
   padding-left: 1em;
   margin-top: 2px;
 }
+
 .post-toc li a.active {
   font-weight: bold;
 }
+
 @media screen and (min-width: 1400px) {
   .post-toc {
     display: block;
   }
 }
+
 /* ------- post toc end -------*/
 /* ========================== post text end ========================== */
 
@@ -364,6 +397,7 @@ article h5, h6 {
   margin-top: 0;
   margin-bottom: 1em;
 }
+
 /* ------- post footer end -------*/
 
 
