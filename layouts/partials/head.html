@@ -30,6 +30,11 @@
   {{ if .Site.GoogleAnalytics }}
   {{ template "_internal/google_analytics.html" . }}
   {{- end }}
+  <style>
+    .katex {
+      font-size: 1.0em;
+    }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
